@@ -14,7 +14,7 @@ class CookBook
     @all_recipies.reduce([]) do |acc, recipe|
       book = Hash.new
       book[:name] = recipe.name
-      book[:details] = recipe.ingredients_required
+      book[:details] = {:ingredents => recipe.ingredients_required }
       book[:total_calories] = recipe.total_calories
       acc << book
       acc
